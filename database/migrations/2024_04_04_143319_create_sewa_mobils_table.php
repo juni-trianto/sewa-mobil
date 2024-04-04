@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('merk_mobils', function (Blueprint $table) {
+        Schema::create('sewa_mobils', function (Blueprint $table) {
             $table->id();
-            $table->string('merk');
-            $table->string('logo');
+            $table->string('mobil_id');
+            $table->string('user_id');
+            $table->enum('status',['booking', 'pakai', 'selesai']);
+            $table->date('mulai');
+            $table->date('selesai');
             $table->timestamps();
-            $table->softDeletes('deleted_at', precision: 0);
         });
     }
 
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('merk_mobils');
+        Schema::dropIfExists('sewa_mobils');
     }
 };

@@ -53,7 +53,7 @@
                     <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href=""
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
                             src="{{ asset('templates') }}/assets/images/users/1.jpg" alt="user" class="" /> <span
-                            class="hidden-md-down">Mark Sanders &nbsp;</span> </a>
+                            class="hidden-md-down">{{ Auth::user()->name }} &nbsp;</span> </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown"></ul>
                 </li>
             </ul>

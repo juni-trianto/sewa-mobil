@@ -1,1 +1,3 @@
-<h1>hello</h1>
+<div class="container-fluid">
+   @livewire('admin.users')
+</div>

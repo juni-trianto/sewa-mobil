@@ -1,9 +1,22 @@
 <div>
-    <form
+  @if (session()->has('message'))
+      <div class="pt-3">
+        <div class="alert alert-success alert-border-left alert-dismissible fade show" role="alert">
+          <i class="ri-check-double-line me-3 align-middle"></i> <strong>Successfull</strong> -  {{ session('message') }}
+          </div>
+      </div>
+    @endif
+    @if (session()->has('error'))
+    <div class="pt-3">
+      <div class="alert alert-danger alert-border-left alert-dismissible fade show" role="alert">
+        <i class="ri-check-double-line me-3 align-middle"></i> <strong>Successfull</strong> -  {{ session('error') }}
+        </div>
+    </div>
+  @endif
+  <form
             wire:submit.prevent="process"
               class="form-horizontal form-material"
               id="loginform"
-              action="index.html"
             >
               <h3 class="box-title m-b-20">Login</h3>
               <div class="form-group">
@@ -15,6 +28,7 @@
                     
                     placeholder="Email"
                   />
+                  @error('email') <span class="text-danger">{{ $message }}</span> @enderror
                 </div>
               </div>
               <div class="form-group">
@@ -25,6 +39,7 @@
                     type="password"
                     placeholder="Password"
                   />
+                  @error('password') <span class="text-danger">{{ $message }}</span> @enderror
                 </div>
               </div>
              
