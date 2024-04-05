@@ -36,6 +36,8 @@
                                     <th>Nama</th>
                                     <th>Email</th>
                                     <th>Telp</th>
+                                    <th>SIM</th>
+                                    <th>Alamat</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -46,6 +48,8 @@
                                     <td>{{ $value->name }}</td>
                                     <td>{{ $value->email }}</td>
                                     <td>{{ $value->telp }}</td>
+                                    <td>{{ $value->sim }}</td>
+                                    <td>{{ $value->address }}</td>
                                     <td>
                                         <button wire:click="delete_confirmation({{$value->id}})" type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus">Del</button>
                                         <button wire:click="delete_confirmation({{$value->id}})" type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#reset">Reset Password</button>

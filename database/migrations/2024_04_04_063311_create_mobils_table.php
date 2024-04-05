@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('gambar_mobil');
             $table->longText('deskripsi_mobil');
             $table->string('nomor_plat')->unique();
-            $table->string('harga_sewa');
+            $table->integer('harga_sewa')->nullable();
             $table->enum('jenis',['matic', 'manual']);
             $table->timestamps();
         });

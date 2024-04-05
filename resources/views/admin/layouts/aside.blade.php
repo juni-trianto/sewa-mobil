@@ -22,12 +22,12 @@
                         <span class="hide-menu">Manajemen Mobil</span>
                     </a>
                 </li>
-                {{-- <li @if ($page_folder == 'users') class="active" @endif> 
-                    <a class="waves-effect waves-dark" href="{{ route('users') }}" >
+                <li @if ($page_folder == 'sewa') class="active" @endif> 
+                    <a class="waves-effect waves-dark" href="{{ route('sewa') }}" >
                         <i  class="fa fa-phone"></i>
                         <span class="hide-menu">Sewa Mobil</span>
                     </a>
-                </li> --}}
+                </li>
                 {{-- <li> <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><i
                             class="fa fa-table"></i><span class="hide-menu">Tables</span></a>
                 </li>

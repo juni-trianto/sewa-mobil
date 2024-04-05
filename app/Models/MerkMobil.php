@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class MerkMobil extends Model
 {
     use HasFactory;
+    protected $fillable = ['merk', 'logo'];
 }

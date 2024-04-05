@@ -18,6 +18,9 @@ return new class extends Migration
             $table->enum('status',['booking', 'pakai', 'selesai']);
             $table->date('mulai');
             $table->date('selesai');
+            $table->integer('jumlah_hari');
+            $table->integer('harga_sewa');
+            $table->integer('total');
             $table->timestamps();
         });
     }
